@@ -36,7 +36,7 @@ if uploaded_file is not None:
     # Get mapping info
     info = soil_info.get(predicted_label, {})
     status = "🌱 Subur" if info.get("subur") else "🚫 Tidak Subur"
-    description = info.get("deskripsi", "-")
+    description = info.get("deskripsiii", "-")
 
     # Display result
     st.markdown(f"### Jenis Tanah: **{predicted_label}**")
