@@ -12,8 +12,21 @@ with open("labels.txt", "r") as f:
     labels = f.read().splitlines()
 
 # UI
-st.title("🌍 nkjkbhjTerraScan – Klasifikasi Jenis Tanah")
+st.title("🌍 TerraScan – Klasifikasi Jenis Tanah")
 st.write("Upload foto tanah, dan sistem akan memprediksi jenis tanah, status kesuburannya, serta memberikan penjelasan.")
+
+# Tambahkan informasi jenis tanah yang didukung
+st.info(
+    "📌 **Jenis tanah yang dapat dipindai oleh sistem ini:**\n\n"
+    "- Aluvial\n"
+    "- Gambut\n"
+    "- Humus\n"
+    "- Kapur\n"
+    "- Latosol\n"
+    "- Mergel\n"
+    "- Podsol\n"
+    "- Vulkanik"
+)
 
 uploaded_file = st.file_uploader("Upload Gambar Tanah", type=["jpg", "jpeg", "png"])
 
