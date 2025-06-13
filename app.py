@@ -12,7 +12,7 @@ with open("labels.txt", "r") as f:
     labels = f.read().splitlines()
 
 # UI
-st.title("🌍 TerraScan – Klasifikasi Jenis Tanah")
+st.title("🌍 nkjkbhjTerraScan – Klasifikasi Jenis Tanah")
 st.write("Upload foto tanah, dan sistem akan memprediksi jenis tanah, status kesuburannya, serta memberikan penjelasan.")
 
 uploaded_file = st.file_uploader("Upload Gambar Tanah", type=["jpg", "jpeg", "png"])
@@ -36,7 +36,7 @@ if uploaded_file is not None:
     # Get mapping info
     info = soil_info.get(predicted_label, {})
     status = "🌱 Subur" if info.get("subur") else "🚫 Tidak Subur"
-    description = info.get("deskripsiii", "-")
+    description = info.get("deskripsi", "-")
 
     # Display result
     st.markdown(f"### Jenis Tanah: **{predicted_label}**")
